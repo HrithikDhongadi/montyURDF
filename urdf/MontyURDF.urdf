@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="MontyURDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0.0248803053149128 0.0020082784853897"
+        rpy="0 0 0" />
+      <mass
+        value="1.84635819081325" />
+      <inertia
+        ixx="0.00973658209153762"
+        ixy="1.14893735388262E-19"
+        ixz="-4.36876615016632E-17"
+        iyy="0.0126871826663701"
+        iyz="1.83343512759344E-05"
+        izz="0.00373027644505458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MontyURDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MontyURDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -1.38777878078145E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.11487302445888" />
+      <inertia
+        ixx="7.00262974944061E-05"
+        ixy="-1.46936793852786E-36"
+        ixz="-8.9446276956826E-20"
+        iyy="4.35510284479888E-05"
+        iyz="-1.70736763465022E-37"
+        izz="4.35510284479888E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MontyURDF/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MontyURDF/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftWheelJoint"
+    type="continuous">
+    <origin
+      xyz="0.095 0.015 -0.066858"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="3.46944695195361E-18 0 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.11487302445888" />
+      <inertia
+        ixx="7.00262974944061E-05"
+        ixy="-3.67341984631965E-37"
+        ixz="-9.02933099040803E-20"
+        iyy="4.35510284479888E-05"
+        iyz="-1.70736763465028E-37"
+        izz="4.35510284479888E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MontyURDF/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MontyURDF/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightWheelJoint"
+    type="continuous">
+    <origin
+      xyz="-0.095 0.015 -0.066858"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
